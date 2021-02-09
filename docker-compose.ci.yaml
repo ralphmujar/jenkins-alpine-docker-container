@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  ci:
+    build: 
+      context: .
+    privileged: true
+    user: root
+    ports:
+      - 5000:8080
+    volumes:
+      - ./jenkins:/var/jenkins_home
